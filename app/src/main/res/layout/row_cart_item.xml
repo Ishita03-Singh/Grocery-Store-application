@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/cartproductIconIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cart_grey"/>
+
+    <TextView
+        android:id="@+id/cartproductTitleTv"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cartproductIconIv"
+        android:text="Title"
+        android:textSize="15sp"
+        android:textColor="@color/Grey03" />
+        <TextView
+            android:layout_toEndOf="@+id/cartproductIconIv"
+            android:id="@+id/cartproductPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cartproductTitleTv"
+            android:text="Rs.100"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_toEndOf="@+id/cartproductIconIv"
+            android:id="@+id/cartproductquantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Per Quantity"
+            android:layout_below="@id/cartproductPriceTv"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/Grey03" />
+    <TextView
+        android:id="@+id/cartproductAmountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_below="@id/cartproductTitleTv"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/cartitemremoveTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/cartproductAmountTV"
+        android:layout_alignParentEnd="true"
+        android:textColor="#f44336" />
+
+</RelativeLayout>

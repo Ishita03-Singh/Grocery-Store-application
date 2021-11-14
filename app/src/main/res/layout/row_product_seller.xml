@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp"
+    android:layout_margin="5dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/productIconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_shopping_add_primary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/productIconIv">
+            <TextView
+                android:layout_toEndOf="@id/discountedPriceTv"
+                android:id="@+id/product_codeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/discountedNoteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="10% off"
+                android:textColor="@color/Grey03"
+                android:background="@drawable/shape_rect05"/>
+            <TextView
+                android:id="@+id/TitleTv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/Grey03" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/rlpp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/discountedPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.90"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/main01" />
+                <TextView
+                    android:layout_toEndOf="@id/discountedPriceTv"
+                    android:id="@+id/originalPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.100"
+                    android:textStyle="bold"
+                    android:textColor="@color/Grey03" />
+                <TextView
+                    android:layout_toEndOf="@id/originalPriceTv"
+                    android:id="@+id/rateTypeTV"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" per quantity"
+                    android:textColor="@color/Grey03" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_below="@id/discountedPriceTv"
+                    android:id="@+id/cess_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CESS: "
+                    android:textColor="@color/Grey03"
+                    tools:ignore="NotSibling" />
+                <TextView
+                    android:layout_toEndOf="@id/cess_text"
+                    android:id="@+id/cessTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 "
+                    android:textColor="@color/Grey03" />
+                <TextView
+                    android:layout_below="@id/cess_text"
+                    android:id="@+id/igstTEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IGST: "
+                    android:textColor="@color/Grey03"
+                    tools:ignore="NotSibling" />
+                <TextView
+                    android:layout_below="@id/cessTV"
+                    android:layout_toEndOf="@id/igstTEXT"
+                    android:id="@+id/igstTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 "
+                    android:textColor="@color/Grey03" />
+                <TextView
+                    android:layout_below="@id/igstTEXT"
+                    android:id="@+id/sgst_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGST: "
+                    android:textColor="@color/Grey03"
+                    tools:ignore="NotSibling" />
+                <TextView
+                    android:layout_toEndOf="@id/sgst_text"
+                    android:id="@+id/SgstTV"
+                    android:layout_below="@id/igstTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 "
+                    android:textColor="@color/Grey03" />
+                <TextView
+                    android:layout_below="@id/sgst_text"
+                    android:id="@+id/cgst_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CGST: "
+                    android:textColor="@color/Grey03"
+                    tools:ignore="NotSibling" />
+                <TextView
+                    android:layout_toEndOf="@id/cgst_text"
+                    android:id="@+id/cgstTV"
+                    android:layout_below="@id/SgstTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 "
+                    android:textColor="@color/Grey03" />
+                <TextView
+                    android:layout_below="@id/cgst_text"
+                    android:id="@+id/hsn_code_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HSN_CODE: "
+                    android:textColor="@color/Grey03"
+                    tools:ignore="NotSibling" />
+                <TextView
+                    android:layout_toEndOf="@id/hsn_code_text"
+                    android:id="@+id/hsnTV"
+                    android:layout_below="@id/cgstTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 "
+                    android:textColor="@color/Grey03" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/nextIv"
+            android:background="@color/white"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_next_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

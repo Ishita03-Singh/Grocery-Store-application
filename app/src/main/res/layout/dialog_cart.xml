@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white"
+            android:background="@color/main01"
+            android:text="My Cart"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/Grey01"/>
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/row_cart_item"
+            android:id="@+id/cartItemRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+              android:padding="5dp"/>
+        <RelativeLayout
+            android:id="@+id/pricelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/freetext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Bill Details"
+                android:textColor="@color/black"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sMrpLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/freetext1"
+                android:text="MRP"
+                android:textColor="@color/Grey03"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sMrpTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 10"
+                android:layout_below="@id/freetext1"
+                android:textColor="@color/Grey03"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/dFeeLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Charges"
+                android:layout_below="@id/sMrpLabelTV"
+                android:textColor="@color/Grey03"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sdFeeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 20"
+                android:layout_below="@id/sMrpTV"
+                android:textColor="@color/Grey03"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sTaxLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taxes and Charges"
+                android:layout_below="@id/dFeeLabelTV"
+                android:textColor="@color/Grey03"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sTaxtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 20"
+                android:layout_below="@id/sdFeeTV"
+                android:textColor="@color/Grey03"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sTotalLAbelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Total"
+                android:layout_below="@id/sTaxLabelTV"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/sTotalTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 480"
+                android:layout_below="@id/sTaxtv"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/placeorderBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Place order"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:background="@color/main01"/>
+
+    </LinearLayout>
+
+</ScrollView>
